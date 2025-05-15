@@ -1,0 +1,38 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "private": true,
+  "description": "C",
+  "author": "",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "^C",
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "@vue/test-utils": "^2.0.0-0",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.5"
+  },
+  "_id": "c@1.0.0",
+  "bugs": {
+    "url": "https://github.com/Jeriko316/pw_u2_p8_je/issues"
+  },
+  "homepage": "https://github.com/Jeriko316/pw_u2_p8_je#readme",
+  "license": "ISC",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jeriko316/pw_u2_p8_je.git"
+  }
+}
