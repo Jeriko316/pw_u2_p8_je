@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+      <div v-show="mostrar">
+        <h1> Estudiante Guardado</h1>
+    </div>
     <label for="id_nombre">Nombre:</label>
     <input v-model="nuevoNombre" id="id_nombre" type="text" />
        <label for="id_apellido">Apellido:</label>
@@ -13,11 +16,29 @@
     
     <button v-on:click="agregarEstudiante()">Agregar</button>
     {{ nuevoNombre }}
-    <ul>
-      <li v-for="{ nombre, apellido, edad, nacionalidad, cedula } in lista" :key="nombre">
-        Nombre: {{ nombre }} - Apellido: {{ apellido }} - Edad:{{ edad }} - nacionalidad:{{ nacionalidad }} - Cedula:{{ cedula }}
-      </li>
-    </ul>
+    
+    <table border="2" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>edad</th>
+          <th>Accion</th>
+          <th>Nacionalidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="{nombre, apellido, edad, nacionalidad} in lista" :key="nombre">
+          <td>{{ nombre }}</td>
+          <td>{{ apellido }}</td>
+          <td>{{ edad }}</td>
+          <td>{{ nacionalidad }}</td>
+          <td><Button>Ver</Button></td>
+        </tr>
+      </tbody>
+    </table>
+
+
   </div>
 </template>
 
@@ -33,6 +54,7 @@ export default {
         { nombre: "jessica", apellido: "teran" },
         { nombre: "ana", apellido: "castillo" },
       ],
+      mostrar: false,
     };
   },
   methods: {
@@ -46,6 +68,10 @@ export default {
         }
         /*this.lista.unshift(nuevo);*/
         this.lista.push(nuevo);
+        this.mostrar=true;
+        this.nombre = null;
+
+        setTimeout(()=>{this.mostrar=false;},3000);
     },
   },
 };
