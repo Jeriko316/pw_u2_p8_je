@@ -1,7 +1,7 @@
 <template>
   <div class="container">
       <div v-show="mostrar">
-        <h1> Estudiante Guardado</h1>
+        <h1> CIUDADANO GUARDADO CON EXITO</h1>
     </div>
     <label for="id_nombre">Nombre:</label>
     <input v-model="nuevoNombre" id="id_nombre" type="text" />
@@ -23,12 +23,13 @@
           <th>Nombre</th>
           <th>Apellido</th>
           <th>edad</th>
+           <th>Nacionalidad</th>
           <th>Accion</th>
-          <th>Nacionalidad</th>
+         
         </tr>
       </thead>
       <tbody>
-        <tr v-for="{nombre, apellido, edad, nacionalidad} in lista" :key="nombre">
+        <tr v-for="{nombre, apellido, edad, nacionalidad,} in lista" :key="nombre">
           <td>{{ nombre }}</td>
           <td>{{ apellido }}</td>
           <td>{{ edad }}</td>
@@ -133,6 +134,76 @@ li {
 }
 
 
+table {
 
+  width: 100%;
+
+  border-collapse: separate;
+
+  border-spacing: 0;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  font-size: 0.95rem;
+
+  background-color: #fff;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+}
+ 
+thead {
+
+  background-color: #f4f6f8;
+
+}
+ 
+thead th {
+
+  text-align: left;
+
+  padding: 15px;
+
+  color: #333;
+
+  font-weight: 600;
+
+  border-bottom: 2px solid #e3e6ea;
+
+}
+ 
+tbody tr {
+
+  transition: background-color 0.2s;
+
+}
+ 
+tbody tr:nth-child(even) {
+
+  background-color: #f9fafb;
+
+}
+ 
+tbody tr:hover {
+
+  background-color: #eef3f9;
+
+}
+ 
+tbody td {
+
+  padding: 15px;
+
+  border-bottom: 1px solid #e3e6ea;
+
+  color: #444;
+
+}
+
+ 
 
 </style>
