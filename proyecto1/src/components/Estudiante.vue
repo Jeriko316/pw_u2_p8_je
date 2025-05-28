@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+  
     <label for="id_nombre">Nombre:</label>
     <input v-model="nuevoNombre" id="id_nombre" type="text" />
        <label for="id_apellido">Apellido:</label>
